@@ -1,153 +1,72 @@
-# 🌿 Crop Doctor - Flutter App
+# 🌿 Crop Doctor
 
-AI-powered crop disease detection for Indian farmers. Built with Flutter for iOS & Android.
+AI-powered crop disease detection for Indian farmers. Photograph a diseased leaf and get an instant diagnosis — disease name, severity, treatment steps, and Indian pesticide recommendations.
 
-## 🚀 Quick Start
+**[⬇️ Download APK](https://github.com/raiden597/crop-doctor/releases/latest)**
 
-### Prerequisites
-- **Flutter SDK** (3.0+): https://flutter.dev/docs/get-started/install
-- **Android Studio** (for Android development)
-- **Xcode** (Mac only, for iOS development)
-- **Free Gemini API Key**: https://aistudio.google.com
+---
 
-### 1️⃣ Create Project & Copy Files
+## Features
+
+- **AI diagnosis** — powered by Google Gemini via OpenRouter
+- **Offline disease guide** — browse 30 common diseases across 10 crops with no internet
+- **8 languages** — English, Hindi, Marathi, Tamil, Telugu, Bengali, Kannada, Punjabi
+- **Scan history** — all past analyses saved on your device
+- **Share results** — send diagnosis to other farmers or agronomists
+- **Low-end device support** — optimised for phones like Moto G96
+
+**Supported crops:** Rice, Wheat, Tomato, Cotton, Sugarcane, Maize, Potato, Onion, Chilli, Groundnut
+
+---
+
+## Getting Started
+
+### 1. Get a free API key
+1. Sign up at [openrouter.ai](https://openrouter.ai) (free)
+2. Go to **Keys** → create a new key
+3. Free tier gives ~50 analyses per day
+
+### 2. Install the app
+Download the APK from the [Releases](https://github.com/raiden597/crop-doctor/releases) page and install it on your Android phone.
+
+> Enable "Install from unknown sources" in your phone settings if prompted.
+
+### 3. Enter your key
+On first launch, paste your OpenRouter key. The app verifies it before saving — your key stays on your device only.
+
+---
+
+## Privacy
+
+- No account required
+- Images go directly from your phone to the AI model
+- Scan history is stored locally on your device only
+- No data is sent to any server we control
+
+---
+
+## Build from Source
 
 ```bash
-flutter create crop_doctor
-cd crop_doctor
-```
-
-Copy all files from this folder into your project, replacing the defaults.
-
-### 2️⃣ Install Dependencies
-
-```bash
+git clone https://github.com/raiden597/crop-doctor.git
+cd crop-doctor
 flutter pub get
+flutter run
 ```
 
-### 3️⃣ Configure API Key
-
-Open `lib/services/ai_service.dart` and replace:
-```dart
-static const String _apiKey = 'YOUR_GEMINI_API_KEY_HERE';
-```
-
-with your actual Gemini API key from https://aistudio.google.com
-
-**🔐 Production tip:** Use `flutter_dotenv` or `flutter_secure_storage` instead of hardcoding!
-
-### 4️⃣ Add Permissions
-
-**iOS** — Open `ios/Runner/Info.plist`, add contents from `ios_permissions.txt`
-
-**Android** — Open `android/app/src/main/AndroidManifest.xml`, add from `android_permissions.txt`
-
-### 5️⃣ Run It
+Requirements: Flutter 3.0+, Android SDK
 
 ```bash
-# Android
-flutter run
-
-# iOS (Mac only)
-flutter run -d ios
-
-# Build release versions
-flutter build apk --release           # Android APK
-flutter build appbundle --release     # Google Play upload
-flutter build ipa --release           # Apple App Store
+# Release APK
+flutter build apk --release
 ```
 
 ---
 
-## 📱 Publishing
+## Disclaimer
 
-### Google Play Store ($25 one-time)
-1. Create developer account: https://play.google.com/console
-2. Run `flutter build appbundle --release`
-3. Upload `build/app/outputs/bundle/release/app-release.aab`
-4. Fill listing details (screenshots, description, content rating)
-5. Submit for review (1–3 days)
-
-### Apple App Store ($99/year)
-1. Enroll: https://developer.apple.com/programs/
-2. Run `flutter build ipa --release` (Mac required)
-3. Upload via Xcode or Transporter app
-4. Configure in App Store Connect
-5. Submit for review (1–7 days)
+AI diagnosis is a guide, not a substitute for expert advice. For serious outbreaks, consult your local Krishi Vigyan Kendra or call the Kisan Helpline: **1800-180-1551** (free).
 
 ---
 
-## 📂 Project Structure
-
-```
-crop_doctor/
-├── lib/
-│   ├── main.dart                    # App entry point
-│   ├── models/
-│   │   └── crop_result.dart         # Data model + AI response parser
-│   ├── services/
-│   │   ├── ai_service.dart          # Gemini Vision API calls
-│   │   └── translations.dart        # English/Hindi strings
-│   ├── screens/
-│   │   ├── home_screen.dart         # Upload + analyze screen
-│   │   └── result_screen.dart       # Disease results display
-│   └── widgets/
-│       └── info_card.dart           # Reusable card components
-├── pubspec.yaml                     # Dependencies
-├── ios_permissions.txt              # iOS Info.plist additions
-└── android_permissions.txt          # Android Manifest additions
-```
-
----
-
-## 🎯 Features
-
-✅ Camera + Gallery image upload
-✅ AI-powered disease detection (Gemini Vision)
-✅ Image compression for fast API calls
-✅ Hindi + English with persistence
-✅ Severity levels with color coding
-✅ Step-by-step treatment instructions
-✅ Prevention tips
-✅ Indian pesticide recommendations
-✅ Demo mode (works without API key)
-✅ Beautiful dark green theme
-✅ Production-ready architecture
-
----
-
-## 🔮 Next Features to Add
-
-- 📴 **Offline mode** — Add `tflite_flutter` + train model on PlantVillage dataset
-- 🗣️ **Voice narration** — `flutter_tts` for illiterate farmers
-- 📍 **Nearby agri-shops** — `google_maps_flutter` + Places API
-- 💾 **History tracking** — `sqflite` for past analyses
-- 📤 **WhatsApp sharing** — `share_plus` package
-- 🌐 **More languages** — Tamil, Telugu, Marathi, Bengali, Punjabi
-- 📞 **Kisan Helpline integration** — One-tap call to 1800-180-1551
-
----
-
-## 💰 Cost Estimates
-
-| Service | Cost |
-|---------|------|
-| Gemini Vision API | Free tier: 1,500 requests/day |
-| Google Play Store | $25 one-time |
-| Apple Developer | $99/year |
-| Domain (optional) | ~₹800/year |
-| **Total to launch** | **~₹10,000 (~$120)** |
-
----
-
-## 📚 Resources
-
-- Flutter Docs: https://flutter.dev/docs
-- Gemini API: https://ai.google.dev/docs
-- PlantVillage Dataset: https://www.kaggle.com/datasets/abdallahalidev/plantvillage-dataset
-- PM-KISAN Portal: https://pmkisan.gov.in
-- Kisan Call Center: 1800-180-1551
-
----
-
-Made with 💚 for Indian Farmers
+Made for Indian farmers 🇮🇳
