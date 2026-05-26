@@ -1,6 +1,6 @@
 # 🌿 Crop Doctor
 
-AI-powered crop disease detection for Indian farmers. Photograph a diseased leaf and get an instant diagnosis — disease name, severity, treatment steps, and Indian pesticide recommendations.
+AI-powered plant and crop disease detection for Indian farmers. Photograph any diseased leaf and get an instant diagnosis — disease name, severity, treatment steps, and Indian pesticide recommendations.
 
 **[⬇️ Download APK](https://github.com/raiden597/crop-doctor/releases/latest)**
 
@@ -8,14 +8,12 @@ AI-powered crop disease detection for Indian farmers. Photograph a diseased leaf
 
 ## Features
 
-- **AI diagnosis** — powered by Google Gemini via OpenRouter
-- **Offline disease guide** — browse 30 common diseases across 10 crops with no internet
+- **AI diagnosis** — works on any plant or crop, powered by Google Gemini via OpenRouter
+- **Offline disease guide** — browse 30 common diseases across 10 major crops with no internet
 - **8 languages** — English, Hindi, Marathi, Tamil, Telugu, Bengali, Kannada, Punjabi
 - **Scan history** — all past analyses saved on your device
 - **Share results** — send diagnosis to other farmers or agronomists
-- **Low-end device support** — optimised for phones like Moto G96
-
-**Supported crops:** Rice, Wheat, Tomato, Cotton, Sugarcane, Maize, Potato, Onion, Chilli, Groundnut
+- **Low-end device support** — optimised for budget Android phones
 
 ---
 
