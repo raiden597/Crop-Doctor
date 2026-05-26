@@ -1,0 +1,10 @@
+<!-- 📱 ADD THESE TO ios/Runner/Info.plist (inside the existing <dict> tag) -->
+
+<key>NSCameraUsageDescription</key>
+<string>Crop Doctor needs camera access to analyze your crop photos</string>
+
+<key>NSPhotoLibraryUsageDescription</key>
+<string>Crop Doctor needs photo access to analyze your crop photos</string>
+
+<key>NSPhotoLibraryAddUsageDescription</key>
+<string>Save crop analysis results to your photo library</string>
