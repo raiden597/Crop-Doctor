@@ -41,7 +41,10 @@ class _OfflineScreenState extends State<OfflineScreen> {
               )
             : null,
       ),
-      body: _selectedCrop == null ? _buildCropGrid() : _buildDiseaseList(),
+      body: SafeArea(
+        top: false,
+        child: _selectedCrop == null ? _buildCropGrid() : _buildDiseaseList(),
+      ),
     );
   }
 

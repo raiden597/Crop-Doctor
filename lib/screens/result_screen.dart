@@ -108,37 +108,40 @@ class _ResultScreenState extends State<ResultScreen> {
           ),
         ],
       ),
-      body: Center(
-        child: ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: 520),
-          child: SingleChildScrollView(
-            padding: const EdgeInsets.all(20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                if (isDemo) _buildDemoBanner(),
-                _buildSummaryCard(),
-                const SizedBox(height: 14),
-                if (!result.isHealthy && result.symptoms.isNotEmpty)
-                  InfoCard(
-                    title: '🔍 ${_t('symptoms')}',
-                    accentColor: const Color(0xFFFBBF24),
-                    child: Text(
-                      result.symptoms,
-                      style: const TextStyle(
-                        color: Color(0xFFFEF3C7),
-                        fontSize: 13,
-                        height: 1.6,
+      body: SafeArea(
+        top: false,
+        child: Center(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 520),
+            child: SingleChildScrollView(
+              padding: const EdgeInsets.all(20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  if (isDemo) _buildDemoBanner(),
+                  _buildSummaryCard(),
+                  const SizedBox(height: 14),
+                  if (!result.isHealthy && result.symptoms.isNotEmpty)
+                    InfoCard(
+                      title: '🔍 ${_t('symptoms')}',
+                      accentColor: const Color(0xFFFBBF24),
+                      child: Text(
+                        result.symptoms,
+                        style: const TextStyle(
+                          color: Color(0xFFFEF3C7),
+                          fontSize: 13,
+                          height: 1.6,
+                        ),
                       ),
                     ),
-                  ),
-                if (!result.isHealthy && result.treatment.isNotEmpty)
-                  _buildTreatmentCard(),
-                if (result.prevention.isNotEmpty) _buildPreventionCard(),
-                if (result.isHealthy) _buildHealthyCard(),
-                const SizedBox(height: 14),
-                _buildBackButton(context),
-              ],
+                  if (!result.isHealthy && result.treatment.isNotEmpty)
+                    _buildTreatmentCard(),
+                  if (result.prevention.isNotEmpty) _buildPreventionCard(),
+                  if (result.isHealthy) _buildHealthyCard(),
+                  const SizedBox(height: 14),
+                  _buildBackButton(context),
+                ],
+              ),
             ),
           ),
         ),
@@ -151,7 +154,7 @@ class _ResultScreenState extends State<ResultScreen> {
       margin: const EdgeInsets.only(bottom: 14),
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: const Color(0xFF60A5FA).withOpacity(0.1),
+        color: const Color(0xFF60A5FA).withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(10),
         border: Border.all(color: const Color(0xFF60A5FA)),
       ),
@@ -166,7 +169,7 @@ class _ResultScreenState extends State<ResultScreen> {
     return Container(
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-        color: const Color(0xFF1D3525).withOpacity(0.5),
+        color: const Color(0xFF1D3525).withValues(alpha: 0.5),
         borderRadius: BorderRadius.circular(14),
         border: Border.all(color: const Color(0xFF2D6A4F)),
       ),

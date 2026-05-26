@@ -60,7 +60,9 @@ class _HistoryScreenState extends State<HistoryScreen> {
             ),
         ],
       ),
-      body: _loading
+      body: SafeArea(
+        top: false,
+        child: _loading
           ? const Center(child: CircularProgressIndicator(color: Color(0xFF40916C)))
           : _entries.isEmpty
               ? _buildEmpty()
@@ -69,6 +71,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
                   itemCount: _entries.length,
                   itemBuilder: (_, i) => _buildEntry(_entries[i]),
                 ),
+      ),
     );
   }
 
