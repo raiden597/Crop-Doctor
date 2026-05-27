@@ -1,4 +1,4 @@
-package com.example.crop_doctor
+package com.raiden597.cropdoctor
 
 import io.flutter.embedding.android.FlutterActivity
 
