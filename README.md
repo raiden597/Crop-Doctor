@@ -13,6 +13,7 @@ AI-powered plant and crop disease detection for Indian farmers. Photograph any d
 - **8 languages** — English, Hindi, Marathi, Tamil, Telugu, Bengali, Kannada, Punjabi
 - **Scan history** — all past analyses saved on your device
 - **Share results** — send diagnosis to other farmers or agronomists
+- **Read aloud** — tap the speaker icon to hear the diagnosis read out in your language
 - **Low-end device support** — optimised for budget Android phones
 
 ---

@@ -29,6 +29,9 @@ dependencies:
   # Sharing
   share_plus: ^10.0.0
 
+  # Text-to-speech
+  flutter_tts: ^4.0.2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

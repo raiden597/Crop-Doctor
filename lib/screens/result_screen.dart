@@ -1,5 +1,6 @@
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 import 'package:share_plus/share_plus.dart';
 import '../models/crop_result.dart';
 import '../services/history_service.dart';
@@ -36,12 +37,64 @@ class _ResultScreenState extends State<ResultScreen> {
   bool get skipSave => widget.skipSave;
   String? get demoReason => widget.demoReason;
 
+  final FlutterTts _tts = FlutterTts();
+  bool _speaking = false;
+
+  static const Map<String, String> _ttsLangCode = {
+    'en': 'en-IN',
+    'hi': 'hi-IN',
+    'mr': 'mr-IN',
+    'ta': 'ta-IN',
+    'te': 'te-IN',
+    'bn': 'bn-IN',
+    'kn': 'kn-IN',
+    'pa': 'pa-IN',
+  };
+
   @override
   void initState() {
     super.initState();
     if (!isDemo && !skipSave) {
       HistoryService().save(imageBytes, result, lang);
     }
+    _tts.setCompletionHandler(() {
+      if (mounted) setState(() => _speaking = false);
+    });
+    _tts.setCancelHandler(() {
+      if (mounted) setState(() => _speaking = false);
+    });
+  }
+
+  @override
+  void dispose() {
+    _tts.stop();
+    super.dispose();
+  }
+
+  Future<void> _toggleSpeak() async {
+    if (_speaking) {
+      await _tts.stop();
+      setState(() => _speaking = false);
+      return;
+    }
+    await _tts.setLanguage(_ttsLangCode[lang] ?? 'en-IN');
+    await _tts.setSpeechRate(0.45);
+    final text = _buildSpeechText();
+    final result = await _tts.speak(text);
+    if (result == 1 && mounted) setState(() => _speaking = true);
+  }
+
+  String _buildSpeechText() {
+    final buf = StringBuffer();
+    buf.write('${result.cropName}. ');
+    buf.write('${result.diseaseName}. ');
+    buf.write('${_t('severity')}: ${result.severity}. ');
+    if (result.symptoms.isNotEmpty) buf.write('${result.symptoms}. ');
+    for (final step in result.treatment) {
+      buf.write('$step. ');
+    }
+    if (result.pesticide.isNotEmpty) buf.write('${result.pesticide}.');
+    return buf.toString();
   }
 
   String _t(String key) => AppTranslations.get(lang, key);
@@ -101,6 +154,14 @@ class _ResultScreenState extends State<ResultScreen> {
         ),
         iconTheme: const IconThemeData(color: Color(0xFFB7E4C7)),
         actions: [
+          IconButton(
+            icon: Icon(
+              _speaking ? Icons.stop_circle : Icons.volume_up,
+              color: _speaking ? const Color(0xFF4ADE80) : const Color(0xFFB7E4C7),
+            ),
+            tooltip: _speaking ? 'Stop' : 'Read aloud',
+            onPressed: _toggleSpeak,
+          ),
           IconButton(
             icon: const Icon(Icons.share, color: Color(0xFFB7E4C7)),
             tooltip: _t('share'),
