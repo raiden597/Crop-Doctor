@@ -114,7 +114,7 @@ class _ApiKeyScreenState extends State<ApiKeyScreen> {
                       style: TextStyle(fontSize: 52)),
                   const SizedBox(height: 16),
                   const Text(
-                    'Crop Doctor',
+                    'Sasya AI',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 26,

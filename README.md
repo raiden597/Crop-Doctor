@@ -1,4 +1,4 @@
-# 🌿 Crop Doctor
+# 🌿 Sasya AI
 
 AI-powered plant and crop disease detection for Indian farmers. Photograph any diseased leaf and get an instant diagnosis — disease name, severity, treatment steps, and Indian pesticide recommendations.
 

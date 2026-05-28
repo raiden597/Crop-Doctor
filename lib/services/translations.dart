@@ -1,7 +1,7 @@
 class AppTranslations {
   static const Map<String, Map<String, String>> translations = {
     'en': {
-      'title': 'Crop Doctor',
+      'title': 'Sasya AI',
       'subtitle': 'AI-powered crop disease detection for Indian farmers',
       'upload': 'Upload Crop Photo',
       'camera': 'Camera',

@@ -20,7 +20,7 @@ class CropDoctorApp extends StatelessWidget {
       valueListenable: appLang,
       builder: (_, lang, __) => MaterialApp(
         key: ValueKey(lang), // rebuild entire app on language change
-        title: 'Crop Doctor',
+        title: 'Sasya AI',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           useMaterial3: true,

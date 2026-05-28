@@ -101,7 +101,7 @@ class _ResultScreenState extends State<ResultScreen> {
 
   void _shareResult() {
     final buf = StringBuffer();
-    buf.writeln('🌿 Crop Doctor — Analysis Report');
+    buf.writeln('🌿 Sasya AI — Analysis Report');
     buf.writeln();
     buf.writeln('🌾 Crop: ${result.cropName}');
     buf.writeln('${result.isHealthy ? "✅" : "⚠️"} Disease: ${result.diseaseName}');
@@ -130,7 +130,7 @@ class _ResultScreenState extends State<ResultScreen> {
       buf.writeln('🧪 Recommended: ${result.pesticide}');
     }
     buf.writeln();
-    buf.writeln('📱 Diagnosed by Crop Doctor App');
+    buf.writeln('📱 Diagnosed by Sasya AI');
     Share.share(buf.toString(), subject: 'Crop Doctor — ${result.cropName} Analysis');
   }
 
