@@ -131,7 +131,7 @@ class _ResultScreenState extends State<ResultScreen> {
     }
     buf.writeln();
     buf.writeln('📱 Diagnosed by Sasya AI');
-    Share.share(buf.toString(), subject: 'Crop Doctor — ${result.cropName} Analysis');
+    Share.share(buf.toString(), subject: 'Sasya AI — ${result.cropName} Analysis');
   }
 
   Color _severityColor() {
@@ -220,7 +220,7 @@ class _ResultScreenState extends State<ResultScreen> {
         border: Border.all(color: const Color(0xFF60A5FA)),
       ),
       child: Text(
-        demoReason ?? '🎭 Demo Mode — Add your Gemini API key in ai_service.dart for live analysis.',
+        demoReason ?? '🎭 Demo Mode — Tap the key icon in the home screen to add your OpenRouter API key.',
         style: const TextStyle(color: Color(0xFF93C5FD), fontSize: 11, height: 1.5),
       ),
     );

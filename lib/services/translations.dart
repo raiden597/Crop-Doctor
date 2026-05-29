@@ -42,7 +42,7 @@ class AppTranslations {
       'commonDiseases': 'Common Diseases',
     },
     'hi': {
-      'title': 'फसल डॉक्टर',
+      'title': 'Sasya AI',
       'subtitle': 'भारतीय किसानों के लिए AI फसल रोग पहचान',
       'upload': 'फसल की फोटो अपलोड करें',
       'camera': 'कैमरा',
@@ -83,7 +83,7 @@ class AppTranslations {
       'commonDiseases': 'सामान्य रोग',
     },
     'mr': {
-      'title': 'पीक डॉक्टर',
+      'title': 'Sasya AI',
       'subtitle': 'भारतीय शेतकऱ्यांसाठी AI पीक रोग ओळख',
       'upload': 'पिकाचा फोटो अपलोड करा',
       'camera': 'कॅमेरा',
@@ -124,7 +124,7 @@ class AppTranslations {
       'commonDiseases': 'सामान्य रोग',
     },
     'ta': {
-      'title': 'பயிர் மருத்துவர்',
+      'title': 'Sasya AI',
       'subtitle': 'இந்திய விவசாயிகளுக்கான AI பயிர் நோய் கண்டறிதல்',
       'upload': 'பயிர் புகைப்படம் பதிவேற்றவும்',
       'camera': 'கேமரா',
@@ -165,7 +165,7 @@ class AppTranslations {
       'commonDiseases': 'பொதுவான நோய்கள்',
     },
     'te': {
-      'title': 'పంట డాక్టర్',
+      'title': 'Sasya AI',
       'subtitle': 'భారతీయ రైతులకు AI పంట వ్యాధి గుర్తింపు',
       'upload': 'పంట ఫోటో అప్లోడ్ చేయండి',
       'camera': 'కెమెరా',
@@ -206,7 +206,7 @@ class AppTranslations {
       'commonDiseases': 'సాధారణ వ్యాధులు',
     },
     'bn': {
-      'title': 'ফসল ডাক্তার',
+      'title': 'Sasya AI',
       'subtitle': 'ভারতীয় কৃষকদের জন্য AI ফসল রোগ সনাক্তকরণ',
       'upload': 'ফসলের ছবি আপলোড করুন',
       'camera': 'ক্যামেরা',
@@ -247,7 +247,7 @@ class AppTranslations {
       'commonDiseases': 'সাধারণ রোগ',
     },
     'kn': {
-      'title': 'ಬೆಳೆ ವೈದ್ಯ',
+      'title': 'Sasya AI',
       'subtitle': 'ಭಾರತೀಯ ರೈತರಿಗಾಗಿ AI ಬೆಳೆ ರೋಗ ಪತ್ತೆ',
       'upload': 'ಬೆಳೆ ಫೋಟೋ ಅಪ್ಲೋಡ್ ಮಾಡಿ',
       'camera': 'ಕ್ಯಾಮೆರಾ',
@@ -288,7 +288,7 @@ class AppTranslations {
       'commonDiseases': 'ಸಾಮಾನ್ಯ ರೋಗಗಳು',
     },
     'pa': {
-      'title': 'ਫਸਲ ਡਾਕਟਰ',
+      'title': 'Sasya AI',
       'subtitle': 'ਭਾਰਤੀ ਕਿਸਾਨਾਂ ਲਈ AI ਫਸਲ ਰੋਗ ਪਛਾਣ',
       'upload': 'ਫਸਲ ਦੀ ਫੋਟੋ ਅਪਲੋਡ ਕਰੋ',
       'camera': 'ਕੈਮਰਾ',

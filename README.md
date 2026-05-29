@@ -2,7 +2,7 @@
 
 AI-powered plant and crop disease detection for Indian farmers. Photograph any diseased leaf and get an instant diagnosis — disease name, severity, treatment steps, and Indian pesticide recommendations.
 
-**[⬇️ Download APK](https://github.com/raiden597/crop-doctor/releases/latest)**
+**[⬇️ Download APK](https://github.com/raiden597/Sasya-AI/releases/latest)**
 
 ---
 
@@ -26,7 +26,7 @@ AI-powered plant and crop disease detection for Indian farmers. Photograph any d
 3. Free tier gives ~50 analyses per day
 
 ### 2. Install the app
-Download the APK from the [Releases](https://github.com/raiden597/crop-doctor/releases) page and install it on your Android phone.
+Download the APK from the [Releases](https://github.com/raiden597/Sasya-AI/releases) page and install it on your Android phone.
 
 > Enable "Install from unknown sources" in your phone settings if prompted.
 
@@ -47,8 +47,8 @@ On first launch, paste your OpenRouter key. The app verifies it before saving �
 ## Build from Source
 
 ```bash
-git clone https://github.com/raiden597/crop-doctor.git
-cd crop-doctor
+git clone https://github.com/raiden597/Sasya-AI.git
+cd Sasya-AI
 flutter pub get
 flutter run
 ```

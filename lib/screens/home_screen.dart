@@ -471,14 +471,14 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       child: Column(
         children: [
-          const Row(
+          Row(
             children: [
-              Text('📡', style: TextStyle(fontSize: 16)),
-              SizedBox(width: 8),
+              const Text('📡', style: TextStyle(fontSize: 16)),
+              const SizedBox(width: 8),
               Expanded(
                 child: Text(
-                  'No internet connection — AI analysis unavailable.',
-                  style: TextStyle(color: Color(0xFFFDE68A), fontSize: 13),
+                  _t('noConnection'),
+                  style: const TextStyle(color: Color(0xFFFDE68A), fontSize: 13),
                 ),
               ),
             ],
@@ -488,7 +488,7 @@ class _HomeScreenState extends State<HomeScreen> {
             width: double.infinity,
             child: ElevatedButton.icon(
               icon: const Icon(Icons.menu_book, size: 16),
-              label: const Text('Browse Offline Disease Guide'),
+              label: Text(_t('browseOffline')),
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFF92400E),
                 foregroundColor: const Color(0xFFFDE68A),
