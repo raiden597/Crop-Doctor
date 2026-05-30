@@ -37,7 +37,7 @@ class HistoryEntry {
     return HistoryEntry(
       id: json['id'],
       timestamp: DateTime.parse(json['timestamp']),
-      imageBytes: base64Decode(json['image'] as String),
+      imageBytes: base64Decode((json['image'] as String? ) ?? ''),
       lang: json['lang'] ?? 'en',
       result: CropAnalysisResult(
         cropName: json['cropName'] ?? '',
