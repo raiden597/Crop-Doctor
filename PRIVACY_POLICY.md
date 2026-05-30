@@ -1,10 +1,10 @@
-# Privacy Policy — Crop Doctor
+# Privacy Policy — Sasya AI
 
 **Last updated: May 2026**
 
 ## What we collect
 
-Crop Doctor does not collect, store, or share any personal data on our servers.
+Sasya AI does not collect, store, or share any personal data on our servers.
 
 ## How the app works
 

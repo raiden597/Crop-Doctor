@@ -208,7 +208,7 @@ class _OfflineScreenState extends State<OfflineScreen> {
                       border: Border.all(color: severityColor.withValues(alpha: 0.4)),
                     ),
                     child: Text(
-                      '${AppTranslations.get(widget.lang, 'severity')}: ${disease.severity}',
+                      '${_t('severity')}: ${disease.severity}',
                       style: TextStyle(color: severityColor, fontSize: 11),
                     ),
                   ),

@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:url_launcher/url_launcher.dart';
 import '../services/key_service.dart';
 import 'home_screen.dart';
 
@@ -181,6 +182,26 @@ class _ApiKeyScreenState extends State<ApiKeyScreen> {
           const Text(
             'Free tier gives ~50 analyses/day with Gemini Flash.',
             style: TextStyle(color: Color(0xFF40916C), fontSize: 11, height: 1.4),
+          ),
+          const SizedBox(height: 10),
+          SizedBox(
+            width: double.infinity,
+            child: OutlinedButton.icon(
+              icon: const Icon(Icons.open_in_browser, size: 16, color: Color(0xFF74C69D)),
+              label: const Text(
+                'Go to openrouter.ai →',
+                style: TextStyle(color: Color(0xFF74C69D), fontSize: 13),
+              ),
+              style: OutlinedButton.styleFrom(
+                side: const BorderSide(color: Color(0xFF2D6A4F)),
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+              ),
+              onPressed: () => launchUrl(
+                Uri.parse('https://openrouter.ai/keys'),
+                mode: LaunchMode.externalApplication,
+              ),
+            ),
           ),
         ],
       ),

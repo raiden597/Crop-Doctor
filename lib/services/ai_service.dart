@@ -40,7 +40,7 @@ class AIService {
     if (remaining == null) return 400; // no cap info, use safe default
     // On OpenRouter, 1 credit = 1 affordable output token
     // Keep a 10-token buffer and cap at 500
-    return ((remaining as num).toDouble() - 10).clamp(50.0, 500.0).toInt();
+    return ((remaining as num).toDouble() - 2).clamp(10.0, 500.0).toInt();
   }
 
   Future<int> _getOptimalMaxTokens() async {
@@ -103,7 +103,7 @@ class AIService {
           (jsonDecode(response.body)['error']?['message'] as String?) ?? '';
       final m = RegExp(r'can only afford (\d+)').firstMatch(errorMsg);
       if (m != null) {
-        maxTokens = (int.parse(m.group(1)!) - 5).clamp(50, 500);
+        maxTokens = (int.parse(m.group(1)!) - 2).clamp(10, 500);
         _cachedMaxTokens = maxTokens;
         _cacheTime = DateTime.now();
         response = await _postToAI(base64Image, prompt, maxTokens);
